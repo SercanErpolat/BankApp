@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM Cash Withdrawal with PIN</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      .atm-container {
+        width: 350px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .atm-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      .atm-container input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .atm-container button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .atm-container button:hover {
+        background-color: #0056b3;
+      }
+      .message {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="atm-container">
+      <h1>ATM Login</h1>
+      <input
+        type="password"
+        id="pinInput"
+        placeholder="Enter PIN"
+        maxlength="4"
+      />
+      <button id="loginButton">Login</button>
+      <div id="message" class="message"></div>
+      <div id="withdrawSection" style="display: none">
+        <h1>Cash Withdrawal</h1>
+        <input
+          type="number"
+          id="withdrawAmount"
+          placeholder="Enter amount"
+          min="0"
+        />
+        <button id="withdrawButton">Withdraw</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
